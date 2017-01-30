@@ -3,7 +3,7 @@ body { font-size: 1.4em; color: #000000 } /* =14px */
 
 header {
     background-color: #000000;
-    background: url("photo11.jpg") no-repeat center center scroll;
+    background: url("img/photo11.jpg") no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,6 +11,11 @@ header {
     width: 100%;
 }
 
+.navbar>.container .navbar-brand {
+     font-family: 'Didact Gothic', sans-serif;
+     font-size: 2em;
+     color: #357494;
+}
 
 .navbar-default {
     background-color: transparent;
@@ -32,8 +37,8 @@ header {
 }
 
 h1 {
-    color: #ffffff;
-    padding-top: 30%;
+    color: #357494;
+    padding-top: 15%;
     font-size: 3em;
     text-align: center;
     font-family: 'Didact Gothic', sans-serif;
@@ -41,8 +46,8 @@ h1 {
 }
 
 header p {
-    color: #357494;
-    padding-bottom: 30%;
+    color: #D9A623;
+    padding-bottom: 20%;
     font-size: 2.5em;
     text-align: center;
     font-family: 'Didact Gothic', sans-serif;
@@ -50,8 +55,10 @@ header p {
 }
 
 article {
-    max-width: 350px;
-    max-height: 250px;
+    max-height: 300px;
+    margin: 10px auto;
+    max-width: 533px;
+    position: relative;
 }
 
 article img {
@@ -61,26 +68,113 @@ article img {
 
 .projects {
     background-color: #ffffff;
-}
-
-.projects .col-xs-12 {
- 
+    margin-bottom: 5%;
 }
 
 
-h2 {
+h2, h3, h4 {
     color: #d25f4f;
     font-size: 2em;
     text-align: center;
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.hover {
+    background: #000;
+  height: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  transition: all ease .5s;
+  -webkit-transition: all ease .5s;
+  -moz-transition: all ease .5s;
+}
+
+.hover p {
+    text-align: center;
+    position: relative;
+    top: 40%;
+    opacity: 1;
+    color: #ffffff;
+    font-size: 2em;
+}
+
+article:hover .hover {
+    opacity: 0.5;
+    transition: all ease .5s;
+}
+
+.project-item {
+    right: 0;
+}
+
+.about {
+    background-color: #649ccc;
+    min-height: 370px;
+}
+
+.about p {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: #d25f4f;
+    text-align: center;
+}
+
+footer h4 {
+    color: #ffffff;
+}
+
+.fa {
+    font-size: 6em;
+    color: #ffffff;
+    margin: 20px 0;
+}
+
+.fcclogo {
+    margin-left: 10px;
+    height: 10vh;
 }
 
 @media (min-width: 768px) {
     h1 {
         font-size: 7em;
     }
+    h2, h3, h4 {
+        font-size: 4em;
+        margin-top: 35px;
+        margin-bottom: 40px;
+    }
     header p {
         font-size: 5.4em;
+    }
+    .col-md-4 {
+        min-height:225px;
+    }
+    .about {
+        min-height: 470px;
+    }
+    .about p {
+        font-size: 1.4em;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-4 {
+        min-height:190px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-md-4 {
+        min-height:225px
     }
 }
